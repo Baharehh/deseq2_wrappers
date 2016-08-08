@@ -52,7 +52,7 @@ for(i in seq_len(length(bw)))
     newvals=sum(Views(cur_coverage, ranges(bed[seqnames(bed)==j])))
     counts[last:(last+length(newvals)-1), i] <-newvals 
     }   
-    last=last+length(newvals) 
+    last=last+length(range_vals) 
     }
 
 }
